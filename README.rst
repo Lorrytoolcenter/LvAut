@@ -57,5 +57,4 @@ output explain
 
 	7)RubBuzz_data    measure RB's data
 
-	7)RubBuzz_data    measure RB's data
 
