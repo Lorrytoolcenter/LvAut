@@ -10,6 +10,7 @@ Mail to: lorryruizhihua@gmail.com
 https://pypi.org/project/LvAut  
 
 https://github.com/Lorrytoolcenter/LvAut  
+
 |tests| |coverage| |docs| |python-versions| |license|
 
 The Python package **audio_wav** handles all kind of audio files  
@@ -24,8 +25,7 @@ sample code:
 	   signal, sample_rate, channels=AUT.load(filename) 
 
 analyze_channels
------------------
- 
+----------------- 
 .. code-block:: python  
 		import LvAut.lvaut_THD as AUT  
 		filename='Device_Mic_THD_R_3.wav'  
