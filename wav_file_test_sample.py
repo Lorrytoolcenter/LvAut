@@ -1,41 +1,25 @@
-Copyright (c) 2021 lorry_rui  
+# _*_ coding: utf-8 _*_
+"""
+Created on newark, logitech,USA
+lorry rui 12/20/2020
+please use sweep tone from High to low
 
-//////////usage:///////////////// 
- 
-for test sweep tone WAV file only  
+before uising: please install lib for AUT_THD libary // prefer to install robotRun which have python.3.6
 
-VC_tde USE only  @ logitech , Lorry RUi  
-
-https://pypi.org/project/LvAut  
-
-https://github.com/Lorrytoolcenter/LvAut  
+if want plot chart please
+pip install matplotlib
 
 
-sample code:  
+"""
 
-"""  
-Created on newark, logitech  
-lorry rui 12/20/2020  
-please use sweep tone from High to low  
+##### Package necessary #####
+import sys,time
+import numpy as np
 
-before uising: please install lib for AUT_THD libary in LvAut // prefer to install robotRun which have python.3.6  
-pip install matplotlib  
-pip install sounddevice  
-pip install playsound  
-
-"""  
-
-##### Package necessary #####  
-import sys,time  
-import threading  
-import numpy as np  
-import AUT.AUT_THD as AUT  
+import LvAut.lvaut_THD as AUT
 from matplotlib import pyplot as plt
-from playsound import playsound
 
-import sounddevice as sd
 
-#print(sd.query_devices())  ### this one can print all audio device
 
 channaelselect=1 ### if recording is dual channel ,leftchannel=1, rightchannel=2, otherwise no need to define
 
@@ -48,17 +32,14 @@ THD_limit_low=0
 THD_limit_up=10
 
 PowertestrangeL=200
-PowertestrangeH=2000
+PowertestrangeH=4500
 Power_limit_low=-70
 Power_limit_up=-40
 
 
 
-outfilename="audio.wav"   ### this one for Wav file to 
+outfilename='Device_Mic_THD_R_3.wav'
 
-
-
-from scipy.io.wavfile import write
 
 def checkdata(freq,data,start_Freq,end_Freq,lowlimit,uplimit):
     output1=[]
@@ -80,44 +61,18 @@ def checkdata(freq,data,start_Freq,end_Freq,lowlimit,uplimit):
         
 
 
-
-def play():
-    playsound('SweepTone SPKR FR THD_16000Hz_50Hz_-3dBFS_5s.wav')
-##    sd.default.samplerate = 44100
-##    #sd.default.device = 'digital output'
-##    data, fs = sf.read("1k.wav", dtype='float32')
-##    sd.play(data, fs, device="Speakers (Logitech G933 Gaming , MME")
-##    
-def record():
-    fs = 44100  # Sample rate
-    seconds = 5  # Duration of recording
-
-    myrecording = sd.rec(int(seconds * fs), samplerate=fs, channels=1, device="Microphone (Logitech Webcam C93, MME")
-    sd.wait()  # Wait until recording is finished
-    write(outfilename, fs, myrecording)  # Save as WAV file 
-
-def job():
-    t1 = threading.Thread(target = record)  # 
-    t1.start()   #
-    #time.sleep(1)
-    play()
-    t1.join()
-    time.sleep(2)# 
-
 if __name__ == "__main__":
     print("Start preprocessing")
-    #job()
-   
-    #files = sys.argv[1:]
-
-
     
     if outfilename:
         
         try:
-            freq,thdh,thd_N,power,Freq_THD,thd_data,Freq_Power,PowerS=AUT.analyze_channels(outfilename, trigeFrequncy,stopananlysis,channaelselect)
+            
+            freq,thdh,thd_N,power,Freq_THD,thd_data,Freq_Power,PowerS,RubBuzz_data=AUT.analyze_channels(outfilename, trigeFrequncy,stopananlysis,channaelselect)
             outF1,outTHDalldata,maxval,minval,THDresult=checkdata(Freq_THD,thd_data,THDtestrangeL,THDtestrangeH,THD_limit_low,THD_limit_up)
             outF2,outPower_alldata,maxval2,minval2,Powerresult=checkdata(Freq_Power,PowerS,PowertestrangeL,PowertestrangeH,Power_limit_low,Power_limit_up)
+            #####display chart, pleae note : this function need import matplotlib
+            AUT.diplaychart(Freq_THD,thd_data,Freq_Power,PowerS,RubBuzz_data,chart_name=outfilename,channel= channaelselect)
             
 
             
@@ -132,10 +87,9 @@ if __name__ == "__main__":
             
             
         except Exception as e:
-            print('Couldn\'t analyze "' + filename + '"')
+            print('Couldn\'t analyze "' + outfilename + '"')
             print(e)
         print()
     else:
         
         sys.exit("You must provide at least one file to analyze")
-
