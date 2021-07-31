@@ -10,6 +10,10 @@ Mail to: lorryruizhihua@gmail.com
 https://pypi.org/project/LvAut  
 
 https://github.com/Lorrytoolcenter/LvAut  
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5d698d16fdf206483d6ad36157e6c43f6b4c0944
 |tests| |coverage| |docs| |python-versions| |license|
 
 The Python package **audio_wav** handles all kind of audio files  
@@ -24,8 +28,12 @@ sample code:
 	   signal, sample_rate, channels=AUT.load(filename) 
 
 analyze_channels
+<<<<<<< HEAD
 -----------------
  
+=======
+----------------- 
+>>>>>>> 5d698d16fdf206483d6ad36157e6c43f6b4c0944
 .. code-block:: python  
 		import LvAut.lvaut_THD as AUT  
 		filename='Device_Mic_THD_R_3.wav'  
@@ -52,4 +60,8 @@ output explain
 	4)thd_data, measure THD's data
 	5)Freq_Power,measure Power's frequency
 	6)PowerS,  measure Power's data
+<<<<<<< HEAD
 	7)RubBuzz_data    measure RB's data
+=======
+	7)RubBuzz_data    measure RB's data
+>>>>>>> 5d698d16fdf206483d6ad36157e6c43f6b4c0944
