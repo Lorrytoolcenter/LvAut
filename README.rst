@@ -25,12 +25,9 @@ sample code:
 	   signal, sample_rate, channels=AUT.load(filename) 
 
 analyze_channels
-<<<<<<< HEAD
 -----------------
- 
-=======
------------------ 
->>>>>>> 5d698d16fdf206483d6ad36157e6c43f6b4c0944
+
+
 .. code-block:: python  
 		import LvAut.lvaut_THD as AUT  
 		filename='Device_Mic_THD_R_3.wav'  
