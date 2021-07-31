@@ -11,7 +11,6 @@ https://pypi.org/project/LvAut
 
 https://github.com/Lorrytoolcenter/LvAut  
 
-=======
 |tests| |coverage| |docs| |python-versions| |license|
 
 The Python package **audio_wav** handles all kind of audio files  
