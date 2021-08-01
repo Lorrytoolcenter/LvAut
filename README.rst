@@ -10,8 +10,7 @@ furnished to do so, subject to the following conditions:
 
  
 *for manufacture test sweep tone sound file ,which also do combined some package from opensource.  
- /////////////////////////////////////////////////////////////////////////////// 
-	audio file analyze USE only  @  Lorry RUi  
+audio file analyze USE only  @  Lorry RUi  
 
 Main feature for this package	
 ============================  
