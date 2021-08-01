@@ -1,6 +1,6 @@
 
-import LvAut1.device as sd
-import LvAut1.lvaut_THD as AUT
+import LvAut.device as sd
+import LvAut.lvaut_THD as AUT
 
 fs = 44100  # Sample rate
 seconds = 5  # Duration of recording
