@@ -108,7 +108,6 @@ analyze_sweep tone
 output explain which analyze_sweep tone
 ----------------------------------    
 
-
 		1)freq  means: single tone , measured frequency  
 		1.1)thd_N   means: single Max THD+N   	
 		2)thdh   means: Sweep Max THD    
