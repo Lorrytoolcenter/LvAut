@@ -51,7 +51,7 @@ list all speaker and mics devices
 		
 		
 
-recording master speaker  
+recording master microphone 
 -----------------
 .. code:: python    
 
