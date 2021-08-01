@@ -103,9 +103,11 @@ analyze_sweep tone
 		print("spectrum Max Power:       %.2fdB " %power)     
 		
 
-	
+
+
 output explain which analyze_sweep tone
 ----------------------------------    
+
 
 	1)freq  means: single tone , measured frequency  
 	1.1)thd_N   means: single Max THD+N  	
@@ -114,7 +116,9 @@ output explain which analyze_sweep tone
 	4)thd_data, measure THD's data
 	5)Freq_Power,measure Power's frequency
 	6)PowerS,  measure Power's data
-	7)RubBuzz_data    measure RB's data
+	7)RubBuzz_data    measure RB's data  
+	
+	
 
 
 analyze_sweep tone out chart setting
