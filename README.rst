@@ -19,8 +19,8 @@ Main feature for this package
 	2) Can play(can set master speaker volume) and recording throgh microphone, which can point the 
 		specific mic. (Like Sounddevice)	
 	3) Can get single tone power and THD+N  
-	4) can get sweep tone FR , TDH, rub/buzz
-	5) can get measure sound Spectrogram (For ML or noise study) (Like librosa)
+	4) can get sweep tone FR , THD, rub/buzz
+	5) can  measure sound Spectrogram (For ML or noise study) (Like librosa)
 		
 ____________________________________	
 
