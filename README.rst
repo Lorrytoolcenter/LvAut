@@ -1,24 +1,23 @@
-Copyright (c) 2021 lorry_rui , Newark ,USA
-'''
+Copyright (c) 2021 lorry_rui , Newark ,USA  
+
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute,  and/or sell
 copies of the Software, and to permit persons to whom the Software is
 furnished to do so, subject to the following conditions:
- The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.'''
-///////////////////////////////////////////////////////////////////////////////
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
  
 *for manufacture test sweep tone sound file ,which also do combined some package from opensource.  
-  
+ /////////////////////////////////////////////////////////////////////////////// 
 	audio file analyze USE only  @  Lorry RUi  
 
 Main feature for this package	
 ============================  
 
 	1) Can Open write sound file. like WAV/MP3 file read/write (like SOUNDFILE)
-	2) Can play(can set volume) and recording throgh microphone, which can point the 
+	2) Can play(can set master speaker volume) and recording throgh microphone, which can point the 
 		specific mic. (Like Sounddevice)	
 	3) Can get single tone power and THD+N  
 	4) can get sweep tone FR , TDH, rub/buzz
@@ -153,7 +152,7 @@ analyze sound file spectrogram(which need install matplotlib)
 		import matplotlib.pyplot as plt
 		import numpy as np
 
-		filename='1k.wav'
+		filename='your sound file.wav'
 
 		def plot_spectrogram(Y, sr, hop_length, y_axis="linear"):
 			plt.figure(figsize=(16, 10))
