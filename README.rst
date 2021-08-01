@@ -110,13 +110,13 @@ output explain which analyze_sweep tone
 
 
 		1)freq  means: single tone , measured frequency  
-		1.1)thd_N   means: single Max THD+N  	
-		2)thdh   means: Sweep Max THD  
-		3)Freq_THD, measure THD's frequency
-		4)thd_data, measure THD's data
-		5)Freq_Power,measure Power's frequency
-		6)PowerS,  measure Power's data
-		7)RubBuzz_data    measure RB's data  
+		1.1)thd_N   means: single Max THD+N   	
+		2)thdh   means: Sweep Max THD    
+		3)Freq_THD, measure THD's frequency   
+		4)thd_data, measure THD's data   
+		5)Freq_Power,measure Power's frequency  
+		6)PowerS,  measure Power's data  
+		7)RubBuzz_data    measure RB's data    
 
 	
 
