@@ -116,6 +116,18 @@ output explain which analyze_sweep tone
 	6)PowerS,  measure Power's data
 	7)RubBuzz_data    measure RB's data
 	
+
+.. code-block:: python  
+
+		import LvAut.lvaut_THD as AUT  
+		filename='Device_Mic_THD_R_3.wav'  
+		trigeFrequncy=400  ## this need sweep from high(above 400) to low sweep tone  
+		stopananlysis=100   ## stop analyze_sweep  
+		channaelselect=1 ### if recording is dual channel ,leftchannel=1, rightchannel=2, otherwise no need to define  
+		freq,thdh,thd_N,power,Freq_THD,thd_data,Freq_Power,PowerS,RubBuzz_data=AUT.analyze_sweep(filename, trigeFrequncy,stopananlysis,channaelselect) 
+		
+        AUT.diplaychart(Freq_THD,thd_data,Freq_Power,PowerS,RubBuzz_data,chart_name="save_picture_name",channel= channaelselect)#display chart, pleae note : this function need import matplotlib
+
 	
 	
 analyze sound file spectrogram
