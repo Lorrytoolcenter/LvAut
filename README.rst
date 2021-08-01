@@ -11,10 +11,12 @@ Mail to: lorryruizhihua@gmail.com
 https://pypi.org/project/LvAut  
 
 https://github.com/Lorrytoolcenter/LvAut  
-|tests| |coverage| |docs| |python-versions| |license|
+
+	|tests| |coverage| |docs| |python-versions| |license|  
+	
 
 The Python package **audio_wav** handles all kind of audio files  
-
+-----------------
 
 sample code:
 ============== 
@@ -27,19 +29,23 @@ sample code:
 change master speaker volume 
 -----------------
 .. code:: python    
+
 		import LvAut.lvaut_THD as AUT  
 		AUT.setspeakervolume(40)  ## set master speaker volume from 0 to 100
 		
 		
 play master speaker  
 -----------------
-.. code:: python    
+.. code:: python   
+ 
 		import LvAut.lvaut_THD as AUT
 		AUT.playsoundWin('yourfile.wav')
+		
 	   	   
-list all devices
+list all speaker and mics devices  
 -----------------
-.. code:: python    
+.. code:: python 
+   
 		import LvAut1.device as sd
 		print(sd.query_devices())
 		
@@ -48,6 +54,7 @@ list all devices
 recording master speaker  
 -----------------
 .. code:: python    
+
 		import LvAut.device as sd
 		import LvAut.lvaut_THD as AUT
 		fs = 44100  # Sample rate
