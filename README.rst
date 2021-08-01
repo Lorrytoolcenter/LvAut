@@ -67,7 +67,7 @@ list all speaker and mics devices
 -----------------
 .. code:: python 
    
-		import LvAut1.device as sd
+		import LvAut.device as sd
 		print(sd.query_devices())
 		
 		
