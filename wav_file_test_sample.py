@@ -68,7 +68,7 @@ if __name__ == "__main__":
         
         try:
             
-            freq,thdh,thd_N,power,Freq_THD,thd_data,Freq_Power,PowerS,RubBuzz_data=AUT.analyze_channels(outfilename, trigeFrequncy,stopananlysis,channaelselect)
+            freq,thdh,thd_N,power,Freq_THD,thd_data,Freq_Power,PowerS,RubBuzz_data=AUT.analyze_sweep(outfilename, trigeFrequncy,stopananlysis,channaelselect)
             outF1,outTHDalldata,maxval,minval,THDresult=checkdata(Freq_THD,thd_data,THDtestrangeL,THDtestrangeH,THD_limit_low,THD_limit_up)
             outF2,outPower_alldata,maxval2,minval2,Powerresult=checkdata(Freq_Power,PowerS,PowertestrangeL,PowertestrangeH,Power_limit_low,Power_limit_up)
             #####display chart, pleae note : this function need import matplotlib
