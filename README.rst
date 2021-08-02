@@ -15,19 +15,19 @@ audio file analyze USE only  @  Lorry RUi
 Main feature for this package	
 ============================  
 
-	1) Can Open write sound file. like WAV/MP3 file read/write (like SOUNDFILE)
-	2) Can play(can set master speaker volume) and recording throgh microphone, which can point the 
-		specific mic. (Like Sounddevice)	
+	1) Can Open write sound file. like WAV/MP3 file read/write ( SOUNDFILE)
+	2) Can play(can set master speaker volume) and recording through microphone, which can point the 
+		specific Mic. ( Sounddevice)	
 	3) Can get single tone power and THD+N  
 	4) can get sweep tone FR , THD, rub/buzz
-	5) can  measure sound Spectrogram (For ML or noise study) (Like librosa)
+	5) can  measure sound Spectrogram (For ML or noise study) ( librosa)
 		
 ____________________________________	
 
 
 Mail to: lorryruizhihua@gmail.com  
 
-         lrui@logitech.com
+         :lrui@logitech.com
 
 https://pypi.org/project/LvAut  
 
@@ -134,7 +134,7 @@ analyze_sweep tone out chart setting
 
 	
 	
-analyze sound file spectrogram
+analyze sound file spectrogram : Convert a power spectrogram (amplitude squared) to decibel (dB) units This computes the scaling ``20 * log10(S / ref)`` in a numerically
 -----------------
  
 .. code-block:: python  
@@ -148,14 +148,14 @@ analyze sound file spectrogram
 
 		S_scale = lvs.stft(y, n_fft=2048, hop_length=512)
 		Y_scale = np.abs(S_scale)
-		Y_log_scale = lvs.power_to_db(Y_scale)
+		Y_log_scale = lvs.amplitude_to_db(Y_scale,ref=np.max)
 		print(Y_log_scale)
 		## print out all data  	
 			
 	
 	
 	
-analyze sound file spectrogram(which need install matplotlib)
+analyze sound file spectrogram(which need install matplotlib)#Compute dB relative to peak power
 -----------------
  
 .. code-block:: python  
@@ -185,8 +185,7 @@ analyze sound file spectrogram(which need install matplotlib)
 
 		S_scale = lvs.stft(y, n_fft=1024, hop_length=512)
 		Y_scale = np.abs(S_scale)
-		Y_log_scale = lvs.power_to_db(Y_scale)
-		#print(Y_log_scale)
+		Y_log_scale = lvs.amplitude_to_db(Y_scale,ref=np.max)
 		plot_spectrogram(Y_log_scale, sample_rate, 512)
 
 			

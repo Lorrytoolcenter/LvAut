@@ -1,18 +1,16 @@
 # -*- coding: utf-8 -*-
 '''Utilities for spectral processing
    lorry rui , Newark , USA
+
 '''
+__version__ = "2021.8.1"
 import warnings
 import numpy as np
 import scipy
 import scipy.ndimage
 import scipy.signal
 import scipy.interpolate
-try:
-    from . import six
-except ImportError:
-    import six
-    
+import six
 from numpy.lib.stride_tricks import as_strided
 
 
@@ -183,6 +181,17 @@ def stft(y, n_fft=2048, hop_length=None, win_length=None, window='hann',
 
 
 def power_to_db(S, ref=1.0, amin=1e-10, top_db=80.0):
+    """
+    Convert a power spectrogram (amplitude squared) to decibel (dB) units
+
+    This computes the scaling ``10 * log10(S / ref)`` in a numerically
+    stable way.
+    :param S:
+    :param ref:
+    :param amin:
+    :param top_db:
+    :return:
+    """
 
     S = np.asarray(S)
 
@@ -214,7 +223,27 @@ def power_to_db(S, ref=1.0, amin=1e-10, top_db=80.0):
     return log_spec
 
 
+def amplitude_to_db(S, ref=1.0, amin=1e-5, top_db=80.0):
 
+    S = np.asarray(S)
+
+    if np.issubdtype(S.dtype, np.complexfloating):
+        warnings.warn('amplitude_to_db was called on complex input so phase '
+                      'information will be discarded. To suppress this warning, '
+                      'call amplitude_to_db(np.abs(S)) instead.')
+
+    magnitude = np.abs(S)
+
+    if six.callable(ref):
+        # User supplied a function to calculate reference power
+        ref_value = ref(magnitude)
+    else:
+        ref_value = np.abs(ref)
+
+    power = np.square(magnitude, out=magnitude)
+
+    return power_to_db(power, ref=ref_value**2, amin=amin**2,
+                       top_db=top_db)
 
 
 
