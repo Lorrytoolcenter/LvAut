@@ -200,7 +200,7 @@ analyze sound file spectrogram(which need install matplotlib)#Compute dB relativ
 .. image:: images/tonal_test.png
    :width: 600
 		
-.. image:: images/THD_tools.png
+.. image:: images/THD_tools.jpg
    :width: 600
    
 github sample code explain  
