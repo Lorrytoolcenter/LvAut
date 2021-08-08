@@ -188,7 +188,10 @@ analyze sound file spectrogram(which need install matplotlib)#Compute dB relativ
 		Y_log_scale = lvs.amplitude_to_db(Y_scale,ref=np.max)
 		plot_spectrogram(Y_log_scale, sample_rate, 512)
 
-			
+	
+	
+<img src="tonal_test.wav.png?raw=true" alt="Skeletonization example" style="max-width: 500px;">
+
 		
 	
 github sample code explain  
