@@ -190,7 +190,7 @@ analyze sound file spectrogram(which need install matplotlib)#Compute dB relativ
 
 	
 	
-<img src="tonal_test.wav.png?raw=true" alt="Skeletonization example" style="max-width: 500px;">
+
 
 		
 	
