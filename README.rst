@@ -116,8 +116,11 @@ output explain which analyze_sweep tone
 		*5)Freq_Power,measure Power's frequency  
 		*6)PowerS,  measure Power's data  
 		*7)RubBuzz_data    measure RB's data    
+		
 
-	
+
+<img src="images/wav_channel_1_THD_out.png?raw=true" alt="Matplotlib example" style="max-width: 500px;">	  
+
 
 
 analyze_sweep tone out chart setting
@@ -191,6 +194,7 @@ analyze sound file spectrogram(which need install matplotlib)#Compute dB relativ
 	
 	
 
+<img src="images/tonal_test.png?raw=true" alt="Matplotlib example" style="max-width: 500px;">
 
 		
 	
