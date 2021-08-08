@@ -119,7 +119,9 @@ output explain which analyze_sweep tone
 		
 
 
-<img src="images/wav_channel_1_THD_out.png?raw=true" alt="Matplotlib example" style="max-width: 500px;">	  
+.. image:: images/wav_channel_1_THD_out.png
+   :width: 600
+
 
 
 
@@ -194,8 +196,9 @@ analyze sound file spectrogram(which need install matplotlib)#Compute dB relativ
 	
 	
 
-<img src="images/tonal_test.png?raw=true" alt="Matplotlib example" style="max-width: 500px;">
 
+.. image:: images/tonal_test.png
+   :width: 600
 		
 	
 github sample code explain  
