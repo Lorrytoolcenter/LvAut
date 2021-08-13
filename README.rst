@@ -230,7 +230,7 @@ github sample code explain
 	5) *spectrumg_data.py*    : pull out data  
 	6) *SingleTone_thd.py*  : play single and get THD  
 	7) *sweep_thd.py*       : Play sweep tone and get THD by your input traget tone
-	8) :ref:`play_record<https://github.com/Lorrytoolcenter/LvAut/blob/master/play_record.py>`       : recording and play simultaneously  
+	8) :ref:`<play_record.py>`       : recording and play simultaneously  
 	9) *wav_file_test_sample.py*       : analyze Sweep WAV file to get FR and THD  
 		
 	
