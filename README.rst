@@ -223,7 +223,7 @@ analyze sound file spectrogram(which need install matplotlib)#Compute dB relativ
 github sample code explain  
 ============================  
 
-	1) :ref:`</masters_speaker_volume.py>`  : test master volume   
+	1) :ref:`volume</masters_speaker_volume.py>`  : test master volume   
 	2) *play_sound.py* : test play speaker  
 	3) *record_sound.py* : test recording   
 	4) *plot_spectrogram.py* plot spectrogram chart  
