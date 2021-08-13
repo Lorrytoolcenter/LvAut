@@ -85,6 +85,23 @@ recording master microphone(you can choose specific device)
 		sd.wait()  # Wait until recording is finished
 		AUT.write("test.wav",myrecording,fs)
 
+
+recording and play simultaneously
+-----------------
+.. code:: python    
+
+		import LvAut.lvaut_THD as AUT
+		import LvAut.soundload as sf
+		import LvAut.device as sd
+		data, fs = sf.read(your sound file, frames=-1, start=None, stop=None, dtype=None, always_2d=False,
+						   fill_value=None, out=None, samplerate=None, channels=None,
+						   format=None, subtype=None, endian=None, closefd=True)
+		myrecording = sd.playrec(data, samplerate=fs, channels=1, dtype=None,
+								 out=None, input_mapping=None, output_mapping=None, blocking=False,
+								 device=device) # if None , will use default device
+		sd.wait()  # Wait until recording is finished
+		AUT.write(outfile,myrecording,fs,'PCM_32') ## 'PCM_16','PCM_32', 'FLOAT', 'DOUBLE'
+
 	   
 analyze_sweep tone
 -----------------
@@ -194,13 +211,15 @@ analyze sound file spectrogram(which need install matplotlib)#Compute dB relativ
 github sample code explain  
 ============================  
 
-	1) *masters_speaker_volume.py*  : test master volume   
+	1) :ref:'masters_speaker_volume.py'  : test master volume   
 	2) *play_sound.py* : test play speaker  
 	3) *record_sound.py* : test recording   
 	4) *plot_spectrogram.py* plot spectrogram chart  
 	5) *spectrumg_data.py*    : pull out data  
 	6) *SingleTone_thd.py*  : play single and get THD  
-	7) *sweep_thd.py*       : Play sweep tone and get THD by your input traget tone  
+	7) *sweep_thd.py*       : Play sweep tone and get THD by your input traget tone
+	8) :ref:'play_record.py'       : recording and play simultaneously  
+	9) *wav_file_test_sample.py*       : analyze Sweep WAV file to get FR and THD  
 		
 	
 	
