@@ -47,13 +47,25 @@ sample code:
 	   filename='yourfile.wav' 
 	   signal, sample_rate, channels=AUT.load(filename) 
 
-change master speaker volume 
+change master speaker volume (from keyboard level)
 -----------------
 .. code:: python    
 
 		import LvAut.lvaut_THD as AUT  
 		AUT.setspeakervolume(40)  ## set master speaker volume from 0 to 100
+
 		
+change current speaker volume and current level (from MS driver level) 
+----------------------------------
+.. code:: python    
+
+		import LvAut.lvaut_THD as AUT  
+		a=AUT.speaker_volume(50)## set current speaker volume from 0 to 100,return reading after set
+		b=AUT.mic_level(50)## set current microphone level from 0to 100,return reading after set
+		print(a,b)
+
+			
+
 		
 play master speaker  
 -----------------
@@ -223,7 +235,8 @@ analyze sound file spectrogram(which need install matplotlib)#Compute dB relativ
 github sample code explain  
 ============================  
 
-	1) **masters_speaker_volume.py**  : test master volume   
+	1) **masters_speaker_volume.py**  : test master volume 
+	1.1) *mic_speaker_level.py*  : sample for changing current speaker volume and current level
 	2) *play_sound.py* : test play speaker  
 	3) *record_sound.py* : test recording   
 	4) *plot_spectrogram.py* plot spectrogram chart  
