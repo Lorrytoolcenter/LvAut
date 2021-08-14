@@ -25,7 +25,7 @@ Main feature for this package
 ____________________________________	
 
 
-Mail to: lorryruizhihua@gmail.com  
+Mail to: :lorryruizhihua@gmail.com  
 
          :lrui@logitech.com
 
@@ -232,7 +232,7 @@ analyze sound file spectrogram(which need install matplotlib)#Compute dB relativ
 .. image:: images/THD_tools.jpg
    :width: 600
    
-github sample code explain  
+github sample code explain  https://github.com/Lorrytoolcenter/LvAut  
 ============================  
 
 	| 1) **masters_speaker_volume.py**  : test master volume  
