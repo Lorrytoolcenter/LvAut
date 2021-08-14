@@ -55,7 +55,7 @@ change master speaker volume (from keyboard level)
 		AUT.setspeakervolume(40)  ## set master speaker volume from 0 to 100
 
 		
-change current speaker volume and current level (from MS driver level) 
+change current speaker volume and current Microphone level (from MS driver level) 
 ----------------------------------
 .. code:: python    
 
@@ -236,7 +236,7 @@ github sample code explain  https://github.com/Lorrytoolcenter/LvAut
 ============================  
 
 	| 1) **masters_speaker_volume.py**  : test master volume  
-	| 1.1) *mic_speaker_level.py*  : sample for changing current speaker volume and current level  
+	| 1.1) *mic_speaker_level.py*  : sample for changing current speaker volume and current mic level  
 	| 2) *play_sound.py* : test play speaker  
 	| 3) *record_sound.py* : test recording   
 	| 4) *plot_spectrogram.py* plot spectrogram chart  
