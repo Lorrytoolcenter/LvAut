@@ -235,16 +235,16 @@ analyze sound file spectrogram(which need install matplotlib)#Compute dB relativ
 github sample code explain  
 ============================  
 
-	|1) **masters_speaker_volume.py**  : test master volume  
-	|1.1) *mic_speaker_level.py*  : sample for changing current speaker volume and current level  
-	|2) *play_sound.py* : test play speaker  
-	|3) *record_sound.py* : test recording   
-	|4) *plot_spectrogram.py* plot spectrogram chart  
-	|5) *spectrumg_data.py*    : pull out data  
-	|6) *SingleTone_thd.py*  : play single and get THD  
-	|7) *sweep_thd.py*       : Play sweep tone and get THD by your input traget tone
-	|8) :ref:`<play_record.py>`       : recording and play simultaneously  
-	|9) *wav_file_test_sample.py*       : analyze Sweep WAV file to get FR and THD  
+	| 1) **masters_speaker_volume.py**  : test master volume  
+	| 1.1) *mic_speaker_level.py*  : sample for changing current speaker volume and current level  
+	| 2) *play_sound.py* : test play speaker  
+	| 3) *record_sound.py* : test recording   
+	| 4) *plot_spectrogram.py* plot spectrogram chart  
+	| 5) *spectrumg_data.py*    : pull out data  
+	| 6) *SingleTone_thd.py*  : play single and get THD  
+	| 7) *sweep_thd.py*       : Play sweep tone and get THD by your input traget tone
+	| 8) :ref:`<play_record.py>`       : recording and play simultaneously  
+	| 9) *wav_file_test_sample.py*       : analyze Sweep WAV file to get FR and THD  
 		
 	
 	
