@@ -65,7 +65,25 @@ change current speaker volume and current Microphone level (from MS driver level
 		print(a,b)
 
 			
+change All speakers' volume and All Microphone level (from MS driver level) 
+----------------------------------
+.. code:: python    
 
+		import LvAut.lvaut_THD as AUT  
+		a=AUT.speaker_all(50)## set all speakers volume from 0 to 100,return reading after set
+		b=AUT.mic_all(50)## set all microphones level from 0to 100,return reading after set
+		print(a,b)
+		
+		
+Get current system default speaker or current Microphone friendname (from MS driver level) 
+----------------------------------
+.. code:: python    
+
+		import LvAut.lvaut_THD as AUT  
+		a=AUT.get_currentSpeakname ## get current speaker name
+		b=AUT.get_currentMicname ## get current Microphone name
+		print(a,b)
+		
 		
 play master speaker  
 -----------------
@@ -235,7 +253,7 @@ analyze sound file spectrogram(which need install matplotlib)#Compute dB relativ
 github sample code explain  https://github.com/Lorrytoolcenter/LvAut  
 ============================  
 
-	| 1) **masters_speaker_volume.py**  : test master volume  
+	| 1) *masters_speaker_volume.py*  : test master volume  
 	| 1.1) *mic_speaker_level.py*  : sample for changing current speaker volume and current mic level  
 	| 2) *play_sound.py* : test play speaker  
 	| 3) *record_sound.py* : test recording   
