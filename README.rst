@@ -81,8 +81,8 @@ Get current system default speaker or current Microphone friendname (from MS dri
 .. code:: python    
 
 		import LvAut.lvaut_THD as AUT  
-		a=AUT.get_currentSpeakname ## get current speaker name
-		b=AUT.get_currentMicname ## get current Microphone name
+		a=AUT.get_currentSpeakname() ## get current speaker name
+		b=AUT.get_currentMicname() ## get current Microphone name
 		print(a,b)
 		
 		
