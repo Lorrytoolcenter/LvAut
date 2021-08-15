@@ -15,12 +15,13 @@ audio file analyze USE only  @  Lorry RUi
 Main feature for this package	
 ============================  
 
-	1) Can Open write sound file. like WAV/MP3 file read/write ( SOUNDFILE)
-	2) Can play(can set master speaker volume) and recording through microphone, which can point the 
+	1) Can set speaker and microphone level and get current friend_name
+	2) Can Open write sound file. like WAV/MP3 file read/write ( SOUNDFILE)
+	3) Can play(can set master speaker volume) and recording through microphone, which can point the 
 		specific Mic. ( Sounddevice)	
-	3) Can get single tone power and THD+N  
-	4) can get sweep tone FR , THD, rub/buzz
-	5) can  measure sound Spectrogram (For ML or noise study) ( librosa)
+	4) Can get single tone power and THD+N  
+	5) can get sweep tone FR , THD, rub/buzz
+	6) can  measure sound Spectrogram (For ML or noise study) ( librosa)
 		
 ____________________________________	
 
