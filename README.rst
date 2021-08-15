@@ -48,7 +48,7 @@ sample code:
 	   filename='yourfile.wav' 
 	   signal, sample_rate, channels=AUT.load(filename) 
 
-change master speaker volume (from keyboard level)
+change master speaker volume (from HID level)
 -----------------
 .. code:: python    
 
