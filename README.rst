@@ -71,8 +71,8 @@ change All speakers' volume and All Microphone level (from MS driver level)
 .. code:: python    
 
 		import LvAut.lvaut_THD as AUT  
-		a=AUT.speaker_all(50)## set all speakers volume from 0 to 100,return reading after set
-		b=AUT.mic_all(50)## set all microphones level from 0to 100,return reading after set
+		a=AUT.speaker_all(50)## set all speakers volume from 0 to 100,return how many speaker set
+		b=AUT.mic_all(50)## set all microphones level from 0to 100,return how many mics set
 		print(a,b)
 		
 		
