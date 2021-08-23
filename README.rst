@@ -52,8 +52,9 @@ change master speaker volume (from HID level)
 -----------------
 .. code:: python    
 
-		import LvAut.lvaut_THD as AUT  
-		AUT.setspeakervolume(40)  ## set master speaker volume from 0 to 100
+		from LvAut.sound_level import setspeakervolume  
+		setspeakervolume(40)  ## set master speaker volume from 0 to 100
+
 
 		
 change current speaker volume and current Microphone level (from MS driver level) 
@@ -61,8 +62,13 @@ change current speaker volume and current Microphone level (from MS driver level
 .. code:: python    
 
 		import LvAut.lvaut_THD as AUT  
-		a=AUT.speaker_volume(50)## set current speaker volume from 0 to 100,return reading after set
-		b=AUT.mic_level(50)## set current microphone level from 0to 100,return reading after set
+		a=AUT.speaker_volume(50)## set current speaker volume from 0 to 100(if mute will unmute),return reading after set
+		#a=AUT.speaker_volume(50,False) ## set current speaker volume from 0 to 100(never touch mute),return reading after set
+		#a=AUT.speaker_volume(50,False,False) ## only readout volume
+		### set Microphone
+		b=AUT.mic_level(50)## set current microphone level from 0to 100(if mute will unmute),return reading after set
+		#b=AUT.mic_level(50,False)## set current microphone level from 0to 100(never touch mute),return reading after set
+		#b=AUT.mic_level(50,False,False)## only readout volume
 		print(a,b)
 
 			

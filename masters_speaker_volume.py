@@ -1,2 +1,2 @@
-import LvAut.lvaut_THD as AUT  
-AUT.setspeakervolume(40)  ## set master speaker volume from 0 to 100
+from LvAut.sound_level import setspeakervolume  
+setspeakervolume(40)  ## set master speaker volume from 0 to 100
